@@ -1,0 +1,21 @@
+<h1>Some note</h1>
+
+<div id="note-title-editor"></div>
+<div id="note-editor"></div>
+
+<script type="text/javascript" src="https://static.pusherplatform.com/textsync/us1/textsync.js"></script>
+<script type="text/javascript">
+  console.log('hello, world')
+  const textSyncInstance = new TextSync({
+    instanceLocator: "v1:us1:32b38e54-a2f9-4ebe-bf96-a511be04d30d",
+  });
+  textSyncInstance.createEditor({
+    docId: "{{noteId}}",
+    element: "#note-editor"
+  });
+  textSyncInstance.createEditor({
+    docId: "{{noteId}}-title",
+    element: "#note-title-editor",
+    richText: false
+  });
+</script>
